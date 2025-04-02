@@ -17,32 +17,55 @@
     body {
       background-color: #f5f5f5;
       color: #333;
+      line-height: 1.6;
     }
 
     /* === HEADER === */
     header {
       background-color: #003366;
       color: white;
-      padding: 1rem 2rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-container {
+      width: 100%;
+      max-width: 1200px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .logo {
       display: flex;
       align-items: center;
       gap: 10px;
+      margin-bottom: 1rem;
     }
 
     .logo i {
       font-size: 1.5rem;
     }
 
+    .logo h1 {
+      font-size: 1.3rem;
+    }
+
+    nav {
+      width: 100%;
+      order: 3;
+      margin-top: 1rem;
+    }
+
     nav ul {
       display: flex;
       list-style: none;
-      gap: 1.5rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
@@ -51,18 +74,24 @@
       font-weight: 500;
       padding: 0.5rem;
       border-radius: 4px;
+      font-size: 0.9rem;
     }
 
     nav a.active {
       background-color: #0066cc;
     }
 
+    .auth-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
     .auth-buttons button {
-      padding: 0.5rem 1rem;
-      margin-left: 10px;
+      padding: 0.5rem 0.8rem;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 0.9rem;
     }
 
     .auth-buttons .login {
@@ -80,12 +109,12 @@
     .banner {
       background: linear-gradient(135deg, #003366, #0066cc);
       color: white;
-      padding: 3rem 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
 
     .banner h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
     }
 
@@ -98,22 +127,24 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 1rem;
+      font-size: 1rem;
     }
 
     /* === SERVIÇOS === */
     .services {
-      padding: 2rem;
+      padding: 1.5rem;
       text-align: center;
     }
 
     .services h2 {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       color: #003366;
+      font-size: 1.5rem;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
       gap: 1.5rem;
       max-width: 1200px;
       margin: 0 auto;
@@ -132,10 +163,15 @@
       margin-bottom: 1rem;
     }
 
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
     /* === PÁGINAS === */
     .page {
       display: none;
-      padding: 2rem;
+      padding: 1rem;
     }
 
     .page.active {
@@ -144,14 +180,18 @@
 
     .page-title {
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem 1rem;
       color: #003366;
+    }
+
+    .page-title h2 {
+      font-size: 1.5rem;
     }
 
     .page-content {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1.5rem;
+      padding: 1rem;
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -161,29 +201,39 @@
     footer {
       background-color: #003366;
       color: white;
-      padding: 2rem;
+      padding: 1.5rem;
       margin-top: 2rem;
     }
 
     .footer-content {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
       max-width: 1200px;
       margin: 0 auto;
-      gap: 2rem;
+    }
+
+    .footer-section {
+      margin-bottom: 1rem;
     }
 
     .footer-section h3 {
       margin-bottom: 1rem;
+      font-size: 1.2rem;
     }
 
     .footer-section ul {
       list-style: none;
     }
 
+    .footer-section li {
+      margin-bottom: 0.5rem;
+    }
+
     .footer-section a {
       color: #ccc;
       text-decoration: none;
+      font-size: 0.9rem;
     }
 
     .social-icons {
@@ -199,9 +249,10 @@
 
     .footer-bottom {
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       padding-top: 1rem;
       border-top: 1px solid #0066cc;
+      font-size: 0.9rem;
     }
 
     /* === ESTILOS ESPECÍFICOS DAS PÁGINAS === */
@@ -209,8 +260,14 @@
       padding: 1rem;
     }
 
+    .account-summary h3, .cards-list h3, .loan-simulator h3, .investment-options h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
     .account-summary p, .cards-list p, .investment-options p {
       margin: 1rem 0;
+      font-size: 1rem;
     }
 
     .quick-actions, .card, .option {
@@ -220,6 +277,12 @@
       border-radius: 4px;
     }
 
+    .quick-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
     button {
       padding: 0.5rem 1rem;
       background-color: #0066cc;
@@ -227,6 +290,7 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      font-size: 0.9rem;
     }
 
     input[type="text"], input[type="range"] {
@@ -235,25 +299,84 @@
       width: 100%;
       max-width: 300px;
     }
+
+    /* === MEDIA QUERIES === */
+    @media (min-width: 600px) {
+      header {
+        padding: 1rem 2rem;
+        flex-direction: row;
+      }
+
+      .logo {
+        margin-bottom: 0;
+      }
+
+      .logo h1 {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        width: auto;
+        order: 0;
+        margin-top: 0;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+
+      .auth-buttons {
+        margin-left: auto;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .quick-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .quick-actions {
+        flex-direction: row;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <h1><i class="fas fa-university"></i> Banco Digital</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#" class="nav-link active" data-page="home">Início</a></li>
-        <li><a href="#" class="nav-link" data-page="conta">Conta</a></li>
-        <li><a href="#" class="nav-link" data-page="cartoes">Cartões</a></li>
-        <li><a href="#" class="nav-link" data-page="emprestimos">Empréstimos</a></li>
-        <li><a href="#" class="nav-link" data-page="investimentos">Investimentos</a></li>
-      </ul>
-    </nav>
-    <div class="auth-buttons">
-      <button class="login">Login</button>
-      <button class="register">Cadastre-se</button>
+    <div class="header-container">
+      <div class="logo">
+        <h1><i class="fas fa-university"></i> Banco Digital</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link active" data-page="home">Início</a></li>
+          <li><a href="#" class="nav-link" data-page="conta">Conta</a></li>
+          <li><a href="#" class="nav-link" data-page="cartoes">Cartões</a></li>
+          <li><a href="#" class="nav-link" data-page="emprestimos">Empréstimos</a></li>
+          <li><a href="#" class="nav-link" data-page="investimentos">Investimentos</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <button class="login">Login</button>
+        <button class="register">Cadastre-se</button>
+      </div>
     </div>
   </header>
 
@@ -273,17 +396,17 @@
         <div class="service-card">
           <i class="fas fa-wallet"></i>
           <h3>Conta Digital</h3>
-          <p>Gerencie seu dinheiro sem custos.</p>
+          <p>Gerencie seu dinheiro sem custos e com total praticidade direto do seu celular ou computador.</p>
         </div>
         <div class="service-card">
           <i class="fas fa-credit-card"></i>
           <h3>Cartão de Crédito</h3>
-          <p>Sem anuidade e com cashback.</p>
+          <p>Sem anuidade e com cashback em todas as compras. Aproveite benefícios exclusivos.</p>
         </div>
         <div class="service-card">
           <i class="fas fa-chart-line"></i>
           <h3>Investimentos</h3>
-          <p>Rendimentos acima da poupança.</p>
+          <p>Rendimentos acima da poupança com a segurança que você precisa para seu dinheiro.</p>
         </div>
       </div>
     </section>
@@ -299,10 +422,12 @@
       <div class="account-summary">
         <h3>Resumo da Conta</h3>
         <p>Saldo disponível: <strong>R$ 5.000,00</strong></p>
+        <p>Limite disponível: <strong>R$ 2.500,00</strong></p>
         <div class="quick-actions">
-          <button>Transferir</button>
-          <button>Pagar</button>
-          <button>Depositar</button>
+          <button><i class="fas fa-exchange-alt"></i> Transferir</button>
+          <button><i class="fas fa-barcode"></i> Pagar</button>
+          <button><i class="fas fa-money-bill-wave"></i> Depositar</button>
+          <button><i class="fas fa-history"></i> Extrato</button>
         </div>
       </div>
     </section>
@@ -318,9 +443,17 @@
       <div class="cards-list">
         <h3>Meus Cartões</h3>
         <div class="card">
-          <p><strong>Cartão de Crédito</strong> •••• •••• •••• 1234</p>
+          <p><strong><i class="fas fa-credit-card"></i> Cartão de Crédito</strong></p>
+          <p>Final 1234 • Limite: R$ 5.000,00</p>
           <p>Limite disponível: R$ 3.000,00</p>
-          <button>Bloquear Cartão</button>
+          <p>Vencimento: 10/2025</p>
+          <button><i class="fas fa-lock"></i> Bloquear Cartão</button>
+          <button><i class="fas fa-eye-slash"></i> Esconder Números</button>
+        </div>
+        <div class="card">
+          <p><strong><i class="fas fa-money-bill"></i> Cartão de Débito</strong></p>
+          <p>Final 5678 • Saldo vinculado à conta</p>
+          <button><i class="fas fa-lock"></i> Bloquear Cartão</button>
         </div>
       </div>
     </section>
@@ -335,9 +468,22 @@
     <section class="page-content">
       <div class="loan-simulator">
         <h3>Simule seu empréstimo</h3>
-        <p>Valor desejado: <input type="text" placeholder="R$ 1.000,00"></p>
-        <p>Prazo: <input type="range" min="1" max="24"> <span>12 meses</span></p>
-        <button>Simular</button>
+        <div class="form-group">
+          <label for="loan-amount">Valor desejado:</label>
+          <input type="range" id="loan-amount" min="1000" max="50000" step="1000" value="10000">
+          <span id="amount-value">R$ 10.000,00</span>
+        </div>
+        <div class="form-group">
+          <label for="loan-term">Prazo:</label>
+          <input type="range" id="loan-term" min="6" max="60" step="1" value="12">
+          <span id="term-value">12 meses</span>
+        </div>
+        <div class="loan-result">
+          <p>Parcela estimada: <strong id="installment-value">R$ 1.050,00</strong></p>
+          <p>Total a pagar: <strong id="total-value">R$ 12.600,00</strong></p>
+          <p>Taxa de juros: <strong>2,5% a.m.</strong></p>
+        </div>
+        <button class="cta-button"><i class="fas fa-calculator"></i> Simular</button>
       </div>
     </section>
   </section>
@@ -352,8 +498,22 @@
       <div class="investment-options">
         <h3>Produtos Disponíveis</h3>
         <div class="option">
-          <p><strong>CDB</strong> - 110% do CDI</p>
-          <button>Investir</button>
+          <p><strong><i class="fas fa-piggy-bank"></i> CDB</strong></p>
+          <p>110% do CDI • Liquidez diária</p>
+          <p>Investimento mínimo: R$ 100,00</p>
+          <button><i class="fas fa-chart-line"></i> Investir</button>
+        </div>
+        <div class="option">
+          <p><strong><i class="fas fa-landmark"></i> LC</strong></p>
+          <p>95% do CDI • Liquidez no vencimento</p>
+          <p>Investimento mínimo: R$ 1.000,00</p>
+          <button><i class="fas fa-chart-line"></i> Investir</button>
+        </div>
+        <div class="option">
+          <p><strong><i class="fas fa-coins"></i> Tesouro Direto</strong></p>
+          <p>SELIC • Vencimento em 2026</p>
+          <p>Investimento mínimo: R$ 30,00</p>
+          <button><i class="fas fa-chart-line"></i> Investir</button>
         </div>
       </div>
     </section>
@@ -363,14 +523,18 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3>Banco Digital</h3>
-        <p>Soluções financeiras para você.</p>
+        <p>Soluções financeiras completas para você e seu negócio.</p>
+        <p><i class="fas fa-phone"></i> (11) 4004-0000</p>
+        <p><i class="fas fa-envelope"></i> contato@bancodigital.com</p>
       </div>
       <div class="footer-section">
         <h3>Links</h3>
         <ul>
-          <li><a href="#">Ajuda</a></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#"><i class="fas fa-question-circle"></i> Ajuda</a></li>
+          <li><a href="#"><i class="fas fa-headset"></i> Contato</a></li>
+          <li><a href="#"><i class="fas fa-file-alt"></i> Termos de uso</a></li>
+          <li><a href="#"><i class="fas fa-lock"></i> Segurança</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt"></i> Agências</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -379,6 +543,13 @@
           <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <h3 class="app-download">Baixe nosso app</h3>
+        <div class="app-buttons">
+          <button class="app-store"><i class="fab fa-apple"></i> App Store</button>
+          <button class="play-store"><i class="fab fa-google-play"></i> Google Play</button>
         </div>
       </div>
     </div>
@@ -403,6 +574,12 @@
         // Mostra a página correspondente
         const pageId = this.getAttribute('data-page');
         document.getElementById(pageId).classList.add('active');
+        
+        // Rolagem suave para o topo
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       });
     });
 
@@ -412,13 +589,83 @@
     
     loginBtn.addEventListener('click', function() {
       if (this.textContent === 'Login') {
-        this.textContent = 'Sair';
+        this.innerHTML = '<i class="fas fa-sign-out-alt"></i> Sair';
         registerBtn.style.display = 'none';
       } else {
         this.textContent = 'Login';
         registerBtn.style.display = 'inline-block';
       }
     });
+
+    // Simulador de empréstimo
+    const loanAmount = document.getElementById('loan-amount');
+    const amountValue = document.getElementById('amount-value');
+    const loanTerm = document.getElementById('loan-term');
+    const termValue = document.getElementById('term-value');
+    const installmentValue = document.getElementById('installment-value');
+    const totalValue = document.getElementById('total-value');
+
+    function formatCurrency(value) {
+      return new Intl.NumberFormat('pt-BR', { 
+        style: 'currency', 
+        currency: 'BRL' 
+      }).format(value);
+    }
+
+    function calculateLoan() {
+      const amount = parseFloat(loanAmount.value);
+      const term = parseFloat(loanTerm.value);
+      const interestRate = 0.025; // 2.5% ao mês
+      
+      const installment = amount * interestRate * Math.pow(1 + interestRate, term) / (Math.pow(1 + interestRate, term) - 1);
+      const total = installment * term;
+      
+      amountValue.textContent = formatCurrency(amount);
+      termValue.textContent = `${term} meses`;
+      installmentValue.textContent = formatCurrency(installment);
+      totalValue.textContent = formatCurrency(total);
+    }
+
+    loanAmount.addEventListener('input', calculateLoan);
+    loanTerm.addEventListener('input', calculateLoan);
+
+    // Inicializa o cálculo
+    calculateLoan();
+
+    // Menu responsivo para telas pequenas
+    const menuToggle = document.createElement('button');
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    menuToggle.classList.add('menu-toggle');
+    menuToggle.style.display = 'none';
+    menuToggle.style.background = 'transparent';
+    menuToggle.style.border = 'none';
+    menuToggle.style.color = 'white';
+    menuToggle.style.fontSize = '1.5rem';
+    menuToggle.style.cursor = 'pointer';
+    
+    const headerContainer = document.querySelector('.header-container');
+    headerContainer.prepend(menuToggle);
+    
+    const nav = document.querySelector('nav');
+    
+    function toggleMenu() {
+      nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+    }
+    
+    menuToggle.addEventListener('click', toggleMenu);
+    
+    function checkScreenSize() {
+      if (window.innerWidth < 600) {
+        menuToggle.style.display = 'block';
+        nav.style.display = 'none';
+      } else {
+        menuToggle.style.display = 'none';
+        nav.style.display = 'block';
+      }
+    }
+    
+    window.addEventListener('resize', checkScreenSize);
+    checkScreenSize();
   </script>
 </body>
 </html>
